@@ -33,7 +33,19 @@
             </TextBlock>
 
             <StackPanel Grid.Row="1">
-                <RadioButton/>
+                <RadioButton Content="Stats"
+                             Style="{StaticResource MenuButtonTheme}">
+                </RadioButton>
+                <RadioButton Content="Spells"
+                             Style="{StaticResource MenuButtonTheme}">
+                </RadioButton>
+                <RadioButton Content="Inventory"
+                             Style="{StaticResource MenuButtonTheme}">
+                </RadioButton>
+                <RadioButton Content="Notes"
+                             Style="{StaticResource MenuButtonTheme}">
+                </RadioButton>
+                
             </StackPanel>
         </Grid>
     </Border>
