@@ -8,9 +8,9 @@
         mc:Ignorable="d"
         Height="600" Width="920"
         ResizeMode="CanResizeWithGrip"
-        Background="Transparent"
         AllowsTransparency="True"
-        WindowStyle="None">
+        WindowStyle="None"
+        Background="Transparent">
 
 
     <Window.DataContext>
@@ -18,7 +18,9 @@
     </Window.DataContext>
     
     <Border Background="#1e1e1e"
-            CornerRadius="10">
+            CornerRadius="10"
+            BorderBrush="#4e4e4e"
+            BorderThickness="1">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
