@@ -22,9 +22,19 @@ namespace CharacterSheet
     public partial class MainWindow : Window
     {
 
+
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void DragHeader(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                DragMove();
+            }
         }
     }
 }

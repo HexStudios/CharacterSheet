@@ -18,7 +18,7 @@
     </Window.DataContext>
     
     <Border Background="#1e1e1e"
-          CornerRadius="20">
+            CornerRadius="10">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -68,24 +68,55 @@
             <Grid Grid.Row="0"
                   Grid.Column="1">
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                
 
+                <Border Background="Transparent" MouseDown="DragHeader"/>
+                <!--Close Button-->
                 <Button Grid.Column="1"
+                        Height="35"
+                        Width="40"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Content="X"
+                        Foreground="White"
+                        Command="{Binding ExitButton}"
+                        BorderThickness="0"
+                        Margin="5">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#3a3a3a"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+
+                <!--<Button Grid.Column="1"
                         Height="25"
                         Width="25"
                         VerticalAlignment="Top"
                         HorizontalAlignment="Right"
-                        Background="Red"
+                        Background="Transparent"
                         Content="X"
                         Foreground="White"
-                        Command="{Binding ExitButton}">
-                    
-                </Button>
+                        Command="{Binding ExitButton}"
+                        BorderThickness="0"
+                        Margin="5">
+                </Button>-->
             </Grid>
-            
         </Grid>
     </Border>
 </Window>
