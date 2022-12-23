@@ -1,5 +1,4 @@
-﻿using CharacterSheet.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,15 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CharacterSheet
+namespace CharacterSheet.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StatsView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StatsView : UserControl
     {
-
-        public MainWindow()
+        public StatsView()
         {
             InitializeComponent();
         }
